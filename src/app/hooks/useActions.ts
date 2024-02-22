@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { taxiSlice } from '../store/slice'
 
 export const useActions = () => {
-	const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
-	return bindActionCreators(taxiSlice.actions, dispatch)
+    return bindActionCreators(taxiSlice.actions, dispatch)
 }

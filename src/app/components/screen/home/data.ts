@@ -1,16 +1,15 @@
-import premiumIcon from "../../../assets/images/premium.png";
-import businessIcon from "../../../assets/images/business.png";
-import economIcon from "../../../assets/images/econom.png";
-import boatIcon from "../../../assets/images/boat.png";
-import helicopterIcon from "../../../assets/images/helicopter.png";
+import premiumIcon from '../../../assets/images/premium.png'
+import businessIcon from '../../../assets/images/business.png'
+import economIcon from '../../../assets/images/econom.png'
+import boatIcon from '../../../assets/images/boat.png'
+import helicopterIcon from '../../../assets/images/helicopter.png'
 
 interface IList {
-    _id: string;
-    title: string;
-    img: string;
-    multiplier: number;
+    _id: string
+    title: string
+    img: string
+    multiplier: number
 }
-
 
 export const optionsList: IList[] = [
     {
@@ -43,5 +42,4 @@ export const optionsList: IList[] = [
         img: helicopterIcon.src,
         multiplier: 2.5,
     },
-];
-
+]

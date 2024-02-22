@@ -1,13 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { taxiSlice } from './slice';
+import { taxiSlice } from './slice'
 
 const rootReducer = combineReducers({
-	taxi: taxiSlice.reducer
+    taxi: taxiSlice.reducer,
 })
 
-
 export const store = configureStore({
-	reducer: rootReducer
+    reducer: rootReducer,
 })
 
 export type TypeRootState = ReturnType<typeof rootReducer>

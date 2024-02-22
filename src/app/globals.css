@@ -3,61 +3,67 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  overflow: hidden;
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
+    overflow: hidden;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 }
 
 .gmnoprint a,
 .gmnoprint span {
-  display: none;
+    display: none;
 }
 
 .gmnoprint div {
-  background: none !important;
+    background: none !important;
 }
 
 .loader {
-  opacitty: 0;
-  animation: fade 0.4s ease-in forwards;
+    opacitty: 0;
+    animation: fade 0.4s ease-in forwards;
 }
 
 @keyframes fade {
-  0% { opacity: 0.4; }
-  50% { opacitty: 0.8; }
-  100% { opacitty: 1; }
+    0% {
+        opacity: 0.4;
+    }
+    50% {
+        opacitty: 0.8;
+    }
+    100% {
+        opacitty: 1;
+    }
 }
 
 .hide-scroll-bar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .hide-scroll-bar::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
