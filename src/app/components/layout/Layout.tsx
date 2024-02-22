@@ -4,6 +4,7 @@ import { FC, useEffect, useState } from 'react'
 import FavIcon from '../../assets/images/preloader.gif'
 import Script from 'next/script'
 import Loader from '../ui/Loader'
+import React from 'react'
 
 interface ILayout {
 	title: string; 
@@ -15,7 +16,8 @@ const Layout: FC<ILayout> = ({ children, title }) => {
 	const [isLoading, setIsLoading] = useState(false)
 
 	useEffect(() => {
-		setIsLoading(true)
+		// add preloader
+		//setIsLoading(true)
 
 		const timeout = setTimeout(() => {setIsLoading(false)}, 4000)
 

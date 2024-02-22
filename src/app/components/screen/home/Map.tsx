@@ -1,5 +1,6 @@
 "use client"
 import GoogleMapReact from 'google-map-react'
+import React from 'react'
 
 
 const Map = () => {
@@ -12,7 +13,13 @@ const Map = () => {
 				lng: 8.6821267
 			}}
 			defaultZoom={ 13 }
-			options={{}}
+			options={{
+				zoomControl: false,
+				fullscreenControl: false,
+				keyboardShortcuts: false,
+				clickableIcons: false,
+				scrollwheel: false
+			}}
 		/>
 	</div>
   )
