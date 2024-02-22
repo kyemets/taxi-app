@@ -24,10 +24,40 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  overflow: hidden;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.gmnoprint a,
+.gmnoprint span {
+  display: none;
+}
+
+.gmnoprint div {
+  background: none !important;
+}
+
+.loader {
+  opacitty: 0;
+  animation: fade 0.4s ease-in forwards;
+}
+
+@keyframes fade {
+  0% { opacity: 0.4; }
+  50% { opacitty: 0.8; }
+  100% { opacitty: 1; }
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
 }
