@@ -26,7 +26,15 @@ const Options = () => {
 					})}>
 						<Image src={option.img} alt={option.title} width={50} height={50} />
 						<div className='text-sm mt-1' style={{ color: '#222' }}>{option.title}</div>
-						<div className='text-md font-medium text-black'>-$</div>
+						<div className='text-md font-medium text-black'>
+							{travelTime ? 
+								'$' + new Intl.NumberFormat('us-US', {
+									style: 'currency',
+									currency: 'USD',
+								}).format(travelTime * option.multiplier) 
+								: 
+								'-$'}
+						</div>
 					</div>
 				</button>
 			))}

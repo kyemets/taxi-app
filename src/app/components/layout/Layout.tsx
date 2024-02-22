@@ -17,7 +17,7 @@ const Layout: FC<ILayout> = ({ children, title }) => {
 
 	useEffect(() => {
 		// add preloader
-		//setIsLoading(true)
+		setIsLoading(true)
 
 		const timeout = setTimeout(() => {setIsLoading(false)}, 4000)
 

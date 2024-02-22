@@ -4,6 +4,8 @@ import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-au
 import { FiSearch } from 'react-icons/fi'
 import cn from 'classnames'
 import { Coords } from 'google-map-react'
+import { useActions } from '@/app/hooks/useActions'
+import { useTypedSelector } from '@/app/hooks/useTypedSelector'
 
 interface IInputPlaces {
 	cbSuccess: (address:string, location:Coords) => void;
@@ -28,6 +30,8 @@ const InputPlaces:FC<IInputPlaces> = ({ cbSuccess, type }) => {
 	useEffect(() => {
 		if(isFrom) setFocus()
 	}, [isFrom])
+
+	const {travelTime} = useTypedSelector(state => state.taxi)
 
 
 	return (
@@ -57,7 +61,7 @@ const InputPlaces:FC<IInputPlaces> = ({ cbSuccess, type }) => {
 						className: 'outline-none w-full text-green-800'
 					})} />
 					{ !isFrom && (
-							<div className='absolute right-5 text-sm text-gray-400'>- min.</div>
+							<div className='absolute right-5 text-sm text-gray-400'>{travelTime ? `${travelTime}min. (${Math.ceil(travelTime / 60)}) h.` : '-min.'}</div>
 						)}
 				</div>
 
