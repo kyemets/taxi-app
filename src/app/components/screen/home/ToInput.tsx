@@ -4,21 +4,20 @@ import InputPlaces from '../../ui/InputPlaces'
 import { Coords } from 'google-map-react'
 import { useActions } from '@/app/hooks/useActions'
 
-const FromInput = () => {
+const ToInput = () => {
 
-	const {setFrom, setTo} = useActions();
+	const { setTo } = useActions();
 
 	const cbSuccess = (address:string, location:Coords) => {
-		setFrom({location, description: address});
-		setTo('');
+		setTo({ location, description: address });
 	}
 
   return (
 	<InputPlaces 
 		cbSuccess={cbSuccess} 
-		type="from" 
+		type="to" 
 	/>
   )
 }
 
-export default FromInput
+export default ToInput
