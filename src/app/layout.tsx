@@ -19,6 +19,18 @@ export default function RootLayout({
     return (
         <Providers>
             <html lang="en">
+                <head>
+                    <meta
+                        name="theme-color"
+                        content="#ecd96f"
+                        media="(prefers-color-scheme: light)"
+                    />
+                    <meta
+                        name="theme-color"
+                        content="#000"
+                        media="(prefers-color-scheme: dark)"
+                    />
+                </head>
                 <body className={inter.className}>{children}</body>
             </html>
         </Providers>

@@ -3,26 +3,29 @@
 ![изображение](https://github.com/kyemets/taxi-app/assets/61251118/e6485c4a-d330-4ae1-a17e-55ac3a342929)
 
 ## Description
+
 Taxi App is a web application built with React and Next.js that allows users to book taxis and view them on a map. It utilizes Redux for state management and integrates with Google Maps API for location services.
 
 ## Installation
+
 To install and run the project locally, follow these steps:
 
 Clone the repository:
-   ```bash
-   git clone https://github.com/kyemets/taxi-app.git
+
+```bash
+git clone https://github.com/kyemets/taxi-app.git
 ```
 
 Navigate to the project directory:
 
     cd taxi-app
-    
+
 Install dependencies:
-        
+
     npm install
-    
+
 Start the development server:
-    
+
     npm run dev
 
 Open your browser and navigate to http://localhost:3000 to view the app.
@@ -42,7 +45,6 @@ Technologies Used
     React Icons
     React Places Autocomplete
     Classnames
-
 
 License
 
