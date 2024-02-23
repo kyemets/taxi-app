@@ -8,19 +8,20 @@ Taxi App is a web application built with React and Next.js that allows users to 
 ## Installation
 To install and run the project locally, follow these steps:
 
-1. Clone the repository:
+Clone the repository:
    ```bash
    git clone https://github.com/kyemets/taxi-app.git
+```
 
-  Navigate to the project directory:
+Navigate to the project directory:
 
     cd taxi-app
     
-  Install dependencies:
+Install dependencies:
         
     npm install
     
-  Start the development server:
+Start the development server:
     
     npm run dev
 
