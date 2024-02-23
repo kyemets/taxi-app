@@ -30,6 +30,9 @@ Start the development server:
 
 Open your browser and navigate to http://localhost:3000 to view the app.
 
+## Environment variable
+   ```REACT_APP_MAP_KEY``` -- Google Maps API Key
+
 Usage
 
     Use the app to search for taxi services by entering your location.
