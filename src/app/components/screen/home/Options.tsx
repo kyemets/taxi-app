@@ -7,9 +7,7 @@ import Image from 'next/image'
 import { optionsList } from './data'
 
 const Options = () => {
-    const { selectedOption, travelTime } = useTypedSelector(
-        (state) => state.taxi,
-    )
+    const { selectedOption, travelTime } = useTypedSelector((state) => state.taxi)
     const { setSelectedOption } = useActions()
 
     return (
@@ -19,20 +17,13 @@ const Options = () => {
                     <button
                         key={option._id}
                         className="inline-block rounded-xl py-2 px-4 outline-none mr-4 bg-white overflow-hidden"
-                        onClick={() =>
-                            travelTime && setSelectedOption(option._id)
-                        }
+                        onClick={() => travelTime && setSelectedOption(option._id)}
                         style={{ minWidth: 105 }}
                     >
                         <div
-                            className={cn(
-                                'opacity-30 text-left transition-opacity duration-300 ease-in-out',
-                                {
-                                    'opacity-100':
-                                        option._id === selectedOption,
-                                },
-                            )}
-                        >
+                            className='opacity-30 text-left transition-opacity duration-300 ease-in-out'
+                            style={{ opacity: (option._id === selectedOption) ? 1 : 0.3 }}
+                            >
                             <Image
                                 src={option.img}
                                 alt={option.title}
@@ -48,9 +39,9 @@ const Options = () => {
                             <div className="text-md font-medium text-black">
                                 {travelTime
                                     ? '$' +
-                                      new Intl.NumberFormat('us-US', {
-                                          style: 'currency',
-                                          currency: 'USD',
+                                    new Intl.NumberFormat('us-US', {
+                                        style: 'currency',
+                                        currency: 'USD',
                                       }).format(travelTime * option.multiplier)
                                     : '-$'}
                             </div>

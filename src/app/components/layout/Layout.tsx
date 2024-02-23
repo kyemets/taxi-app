@@ -20,7 +20,7 @@ const Layout: FC<ILayout> = ({ children, title }) => {
 
         const timeout = setTimeout(() => {
             setIsLoading(false)
-        }, 4000)
+        }, 3000)
 
         return () => {
             clearTimeout(timeout)
