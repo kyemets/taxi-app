@@ -48,6 +48,7 @@ Technologies Used
     React Icons
     React Places Autocomplete
     Classnames
+    Tailwind CSS
 
 License
 
